@@ -11,12 +11,13 @@ from functions import check_audio_location
 from functions import click_location
 from functions import connect_to_computer_audio
 from functions import move_to_location
+# import function check if in zoom meeting
+from functions import is_in_meeting
+# import function leave zoom meeting
+from functions import leave_zoom
+
 
 print("Running")
-# set up data to write and read by pyautogui
-
-#row = df.loc[df['timings']]
-
 
 while True:
     df = pd.read_csv("data/info_2.csv")
@@ -31,27 +32,44 @@ while True:
     # Start process 
     run_process()
 
-    # looking for audio location
-    # to confrim that we in zoom meeting if not than run process again by if else condition
-    is_audio_location = check_audio_location.check_location()
+    # check if in zoom meeting by looking for connect audio button
+    # if not than run process 
+    # currently_in_meeting return positions x y of audio button 
+    currently_in_meeting = is_in_meeting.check_if_in_meeting()
     
-    if is_audio_location is not None:
-        print(f"Conect to Zoom Meeting successfully (Found Audio location) at {is_audio_location}")
+    if  currently_in_meeting is not None:
+        
+        print(f"Conect to Zoom Meeting successfully (Found Audio location) at {currently_in_meeting}")
         
         # move to audio location
-        move_to_location.move(is_audio_location)
+        move_to_location.move(currently_in_meeting)
         time.sleep(2)
         # click connect to audio 
         click_location.click("Connect Audio button successfully")
         time.sleep(2)
         
-        # find conect to computer audio location
+        # find button to conect computer audio location
         # and click on connect to computer audio location
         connect_to_computer_audio.connect_audio()
         print("End process of connecting to Zoom Meeting")
+        
+        time.sleep(5)
         break
-    
     else:
         print("Faild To Conect Zoom Meeting (No Audio location found)")
         # run process again in while loop
         continue
+    
+# if out of while loop start new while loop 
+# cheking for time to
+# read df file
+df = pd.read_csv("data/info_2.csv") 
+# import check time to leave zoom meeting
+from check_time_to_leave import check_time
+check_time(df)
+
+    
+        
+        
+       
+   

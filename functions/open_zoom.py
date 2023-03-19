@@ -6,4 +6,4 @@ def open():
     
     print("open function called successfully")
     
-    time.sleep(5)
+    time.sleep(6)

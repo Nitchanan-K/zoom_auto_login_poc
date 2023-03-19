@@ -10,7 +10,7 @@ from functions import find_location
 from functions import click_location
 from functions import type_on_location
 from functions import find_multiple_locations
-from functions import connect_to_computer_audio
+
 
 # set up data to write and read by pyautogui
 df = pd.read_csv("data/info_2.csv")
@@ -75,4 +75,3 @@ def run_process():
     
     
     
-#run_process()
