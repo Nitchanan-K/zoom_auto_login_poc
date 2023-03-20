@@ -31,3 +31,6 @@ $ pip install PyAutoGUI
 ## Sources
 This bot is inspired by Anish Malla
 bot tutorial by [@Anish-Malla](https://github.com/Anish-Malla/Zoom-Automation-Python)
+
+## Important Note 
+Result will be vary depend on zoom version user interface please change picture to locate positions accordingly
