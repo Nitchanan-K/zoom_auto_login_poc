@@ -3,7 +3,7 @@
 ## General info
 
 This bot using PyAutoGUi to find position that needed to click and write info that needed
-stored data in csv file and read with pandas dataframe by setting time for login and logout 
+and stored data in csv file and read with pandas dataframe by setting time for login and logout 
 we can use while loop to check if current time equal set time than execute the tasks that we set.
 ### To run this project, install requirement:
 * PyAutoGUI => 0.9.53 
