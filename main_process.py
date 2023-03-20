@@ -4,13 +4,12 @@ import time
 import pandas as pd
 from datetime import datetime
 
-# import functions 
+# import needed functions 
 from functions import open_zoom
 from functions import find_location
 from functions import click_location
 from functions import type_on_location
 from functions import find_multiple_locations
-
 
 # set up data to write and read by pyautogui
 df = pd.read_csv("data/info_2.csv")
@@ -20,8 +19,7 @@ meeting_pw = str(df.iloc[0,2])
 print(str(df.iloc[0,1]))
 print(str(df.iloc[0,2]))
 
-
-      
+# start process
 def run_process():
     
     # open zoom
@@ -60,7 +58,6 @@ def run_process():
     # find password input location    
     find_location.find_location_on_screen("assets\images\meeting_pswd.png", "Meeting Password input")
     time.sleep(2)
-    
     # type meeting password
     type_on_location.write(meeting_pw)
     time.sleep(2)

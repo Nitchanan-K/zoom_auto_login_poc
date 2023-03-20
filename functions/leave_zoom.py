@@ -1,9 +1,11 @@
 import pyautogui
 import time
 
+# import needed function 
 from functions import click_location
 from functions import move_to_location
 from functions import find_location
+
 
 def leave(leave_button,leave_meeting_button,location_name_1,location_name_2):
     
