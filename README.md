@@ -36,5 +36,5 @@ bot tutorial by [@Anish-Malla](https://github.com/Anish-Malla/Zoom-Automation-Py
 Result will be vary depend on zoom version user interface please change picture to locate positions accordingly
 
 ## Ideas 
-Add Python Speech Recognition do click emogi base on wave signal and by using AssemblyAI API to turn voice into text and use text into code action.
-Add ChatGPT API get tasks from Voice Recognition and ask answer to ChatGPT than send data back to finish the tasks accordingly.
+* Add Python Speech Recognition do click emogi base on wave signal and by using AssemblyAI API to turn voice into text and use text into code action.
+* Add ChatGPT API get tasks from Voice Recognition and ask answer to ChatGPT than send data back to finish the tasks accordingly.
